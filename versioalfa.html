@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="versioalfaimg.css" rel="stylesheet" type="text/css"/>
+        <script>
+        function comprovar(){
+        var lletra=documentgetByld("lletra").value;
+        if ((lletra>="a") && (lletra<="m")){window.alert("No dins lletra has fallat"}
+        }
+         function amagar(){
+             document.getElementById("button").disabled=true;
+            
+         }       
+        </script>
+    </head>
+    <body onload="amagar()"> 
+        <h2>Prototip Joc Del Penjat</h2>
+        <label for="lletra"></label>
+        <input id="lletra" placeholder="inserta una lletra minuscula">
+        <button onclick ="comprovar()">Comprovar</button><br>
+        <h2>Paraula</h2>
+        <p>-------
+        <h2>Vides</h2>
+        <p>-</p>
+        <h2>Lletres</h2>
+        <p>-------</p>
+        <p>Credits:<a href="https://prosselloe.wordpress.com/">El joc del penjat on Scratch</a></p>
+        div= ing src= imatges
+        <img src="img/ahorcado_0.png" alt=""/>
+        <img src="img/ahorcado_1.png" alt=""/>
+        <img src="img/ahorcado_2.png" alt=""/>
+        <img src="img/ahorcado_3.png" alt=""/>
+        <img src="img/ahorcado_4.png" alt=""/>
+        <img src="img/ahorcado_5.png" alt=""/>
+        <img src="img/ahorcado_6.png" alt=""/>
+    </body>
+</html>
+   
+        function= ("Comprovar"); 
+            var lletra=document.getElementById("lletra").value;
+            //Convertim les minuscules a majúscules>;
+            lletra= lletra.toLowerCase();
+            //Eliminam els accents o dièresis de les vocals
+            switch (lletra){
+                case "á":
+                case "à":
+                    lletra="a";
+                    break;
+                case "é":
+                case "è":
+                    lletra="e";
+                    break;
+                case "í":
+                case "ï":
+                    lletra="i";
+                    break;
+                case "ó":
+                case "ò":
+                    lletra="o";
+                    break;
+                case "ú":
+                case "ü":
+                    lletra="u";
+                    break;
+            }
+            if((lletra>="a") && (lletra<="m") || (lletra === "ç")){
+                window.alert("has acertat");  
+                paraula = paraula + lletra + " ";
+                document.getElementById("paraula").innerHTML = paraula;
+            }else{       
+              window.alert("has fallat;"); 
+              lletres = lletres + lletra + " ";
+              document.getElementById("lletres").innerHTML = lletres;
+              vides=vides-1;
+            }
+            document.getElementById("vides").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
+            if (vides <=0) {
+                  window.alert("has perdut");
+                  Aturatot();
+            }
+            if (paraula.length >= 14) {
+                window.alert("has guanyat");
+                Aturatot();
+            }
+        }
+        
+        function Aturatot(){
+            document.getElementById("button").disabled=true;
+            document.getElementById("lletra").disabled=true;
+        }
+    </script>
+    </head>
+    <body>        
+        <h2>Prototip Joc Del Penjat</h2>
+        <label for="lletra"></label>
+        <input id="lletra" placeholder="Inserta una lletra minuscula">
+        <button id="button" onclick ="Comprovar()">Comprovar</button><br>
+        <h2>Paraula</h2>
+        <p id="paraula">&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-</p>
+        <h2>Vides</h2>
+        <p id="vides">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7</p>
+        <h2>Lletres</h2>
+        <p id="lletres" >&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-&nbsp;-</p>
+        <p>Credits:<a href="https://prosselloe.wordpress.com/">El joc del penjat on Scratch</a></p>
+    </body>
+</html>
+
