@@ -47,20 +47,25 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 window.alert("has acertat");  
                 paraula = paraula + lletra + " ";
                 document.getElementById("paraula").innerHTML = paraula;
+                document.getElementById("miau").play();
             }else{       
               window.alert("has fallat;"); 
               lletres = lletres + lletra + " ";
               document.getElementById("lletres").innerHTML = lletres;
+              document.getElementById("boom_cloud").play();
               vides=vides-1;
               MostraImg();
             }
             document.getElementById("vides").innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + vides;
             if (vides <=0) {
                   window.alert("has perdut");
+                  document.getElementById("cat-fight").play();
                   Aturatot();
+                  
             }
             if (paraula.length >= 14) {
                 window.alert("has guanyat");
+                document.getElementByld("cheer").play();
                 Aturatot();
             }
         }
@@ -79,6 +84,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             document.getElementById("ahorcado_1").hidden = true;
             document.getElementById("ahorcado_0").hidden = true;
        }  
+       
        
        function MostraImg() {
             //Eliminam els accents o dièresis de les vocals
@@ -108,7 +114,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             case 0:
                  document.getElementById("ahorcado_0").hidden = false;
                   document.getElementById("ahorcado_1").hidden = true;
-                  break;                    
+                  break; 
             }               
        }
     </script>
@@ -136,7 +142,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
        <img src="img/ahorcado_6.png" id="ahorcado_6" style="width:280px;height:270px;"/>
        </div>
         
-       
+        <audio id="miau"><source src="aud/miau.mp3" type="audio/mpeg"></audio>
+        <audio controls>
+            <source src="aud/boom_cloud.mp3" type="audio/mpeg">
+        </audio><audio id="cat-fight"><source src="aud/cat-fight.mp3" type="audio/mpeg"></audio>
     </body> 
 </html>
   
