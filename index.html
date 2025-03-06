@@ -12,7 +12,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
            #imatges {position: relative; top:-386px; left:318px;}
         </style>
       <script>
-          var  vides=7;   
+          var vides=7;   
           var Paraula=[];
           var Lletres=["_","_","_","_","_","_","_"];
          
@@ -26,7 +26,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
              var paraulespistes = [1,2,0,2,2,2,1,0,2];
           //Escull una paraula aleatòriament
           // var aleatori = Math.floor(Math.random)()*paraules.length);
-          var aleatori = Math.floor(Math.random)   () * paraules.length);
+          var aleatori = Math.floor(Math.random() * paraules.length);
          
           var paraula = paraules[aleatori];
          
@@ -71,15 +71,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     lletra="u";
                     break;
             }
-            
-            if paraula.includes(lletra)
-            if (paraula.index0f(lletra)!= -1) {
-            
-            
-            var pos = paraula.index0f(lletra);
-            Paraula[pos]= lletra;
-            }
-            if((lletra>="a") && (lletra<="m") || (lletra === "ç")){
+            window.alert(paraula);
+            // if((lletra>="a") && (lletra<="m") || (lletra === "ç")){
+            if (paraula.includes(lletra)) {
+                var pos = paraula.indexOf(lletra);
+                for (var i = 0;i < paraula.lenght;i++) {
+                      Paraula[i] = lletra;
+                }
+                Paraula[pos]= lletra;
                 window.alert("has acertat");  
                
                 // Modificat per Pere Rosselló
@@ -92,6 +91,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
              
                 // Modificat per Pere Rosselló
                 // lletres = lletres + lletra + " ";
+                Lletres[7 - vides]= lletra;
                 document.getElementById("lletres").innerHTML = Lletres;
                
                 document.getElementById("boom_cloud").play();
