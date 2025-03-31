@@ -57,7 +57,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
              var paraulespistes = [1,2,0,2,2,2,1,0,2];
           //Escull una paraula aleatòriament
           // var aleatori = Math.floor(Math.random)()*paraules.length);
-          var aleatori = Math.floor(Math.random) ()* paraules.length);
+          var aleatori = Math.floor(Math.random() * paraules.length);
          
           var paraula = paraules[aleatori];
          
@@ -254,7 +254,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <!--
                     <button id="agut" onclick="alert('Sense vocals accentuades!');" 
                             style="color:red" title="Accent Agut">´</button>
-                    -->
+                    
                     <button id="retro" onclick="Retroces();;" title="BACKSPACE">←</button>
                   </td>          
                 </tr>
@@ -295,7 +295,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <button id="volat" onclick="document.getElementById('lletra').value = '·';" 
                             style="color:blue" title="Punt Volat">·</button>
                     <button id="guio" onclick="document.getElementById('lletra').value = '-';" 
-                            style="color:blue" title="Guionet">-</button>
+                            style="color:blue" title="Guionet">-</button> 
+<button id="ca" style="height: 20px; width: 28px"            onclick="CanviarIdioma('ca')">
+                <img src="img/ca.png" alt="tra_ca" title="en Català">
+</button>
+<button id="es" style="height: 20px; width: 28px"     onclick="CanviarIdioma('es')">
+                <img src="img/es.png" alt="tra_es" title="en Español"></button>
+<button id="en" style="height: 20px; width: 28px"     onclick="CanviarIdioma('en')">
+                <img id="gb" src="img/gb.png" alt="tra_en" title="in English"></button>
                     <!--
                     <button id="greu" onclick="alert('Sense vocals accentuades!');" 
                             style="color:red" title="Accent Greu">`</button>
