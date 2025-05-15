@@ -10,6 +10,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 #imatges { position:relative; top:-386px; left:318px;}
 style="width:86px;height:90px"
 
-<audio id="miau"><source  src="aud/miau.mp3" type="audio/mpeg"></audio>
+<audio> id="miau"><source  src="aud/miau.mp3" type="audio/mpeg"></audio>
  
             document.getElementByld.id ("miau").play();
